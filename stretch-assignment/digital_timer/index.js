@@ -17,7 +17,7 @@ function countZeroToNine(target, ms) {
         target.innerHTML = count;
         if(secondTens.innerHTML === '1') {
             clearInterval(counter);
-            digits.forEach(item => item.getElementsByClassName.style.color = "red");
+            digits.forEach(item => item.getElementsByClassName.color = "red");
         }
     }, ms)
 }
