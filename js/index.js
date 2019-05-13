@@ -44,7 +44,21 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 const allNavItems = document.querySelectorAll('nav a');
 for(let i=0; i < allNavItems.length; i++) {
   allNavItems[i].textContent = siteContent['nav'][`nav-item-${i + 1}`]
+  allNavItems[i].style.color = "green"
 }
+
+const navAll = document.querySelector('nav a')
+
+const nav = document.querySelector('nav')
+const backItem = document.createElement('a')
+backItem.textContent = "Hi THERE"
+nav.appendChild(backItem)
+backItem.style.color = "green"
+
+const frontItem = document.createElement('a')
+frontItem.textContent = "HI LOL"
+nav.prepend(frontItem)
+frontItem.style.color = "green"
 
 const jumboImg = document.getElementById('cta-img');
 jumboImg.setAttribute('src', siteContent["cta"]["img-src"])
@@ -63,3 +77,60 @@ featuresTitle.textContent = siteContent["main-content"]["features-h4"]
 
 const featuresContent = document.querySelector('.text-content:nth-child(1) p');
 featuresContent.textContent = siteContent["main-content"]["features-content"]
+
+const aboutTitle = document.querySelector('.text-content:nth-child(2) h4');
+aboutTitle.textContent = siteContent["main-content"]["about-h4"]
+
+const aboutContent = document.querySelector('.text-content:nth-child(2) p');
+aboutContent.textContent = siteContent["main-content"]["about-content"]
+
+const bottomContent = document.querySelector('.bottom-content');
+
+const servicesTitle = document.querySelector('.text-content:nth-child(3) h4');
+servicesTitle.textContent = siteContent["main-content"]["services-h4"]
+
+const servicesContent = document.querySelector('.text-content:nth-child(3) p');
+servicesContent.textContent = siteContent["main-content"]["services-content"]
+
+const productDiv = document.createElement('div')
+productDiv.className = "text-content"
+bottomContent.appendChild(productDiv)
+
+const newProduct = document.createElement('h4')
+newProduct.textContent = siteContent["main-content"]["product-h4"]
+
+productDiv.appendChild(newProduct)
+
+const newProductContent = document.createElement('p');
+newProductContent.textContent = siteContent["main-content"]["product-content"]
+
+productDiv.appendChild(newProductContent)
+
+const visionDiv = document.createElement('div')
+visionDiv.className = "text-content"
+bottomContent.appendChild(visionDiv)
+
+const newVision = document.createElement('h4')
+newVision.textContent = siteContent["main-content"]["vision-h4"]
+
+visionDiv.appendChild(newVision)
+
+const newVisionContent = document.createElement('p');
+newVisionContent.textContent = siteContent["main-content"]["vision-content"]
+
+visionDiv.appendChild(newVisionContent)
+
+const contactTitle = document.querySelector('.contact h4');
+contactTitle.textContent = siteContent["contact"]["contact-h4"]
+
+const contacta1 = document.querySelector('.contact p:nth-child(2)');
+contacta1.textContent = siteContent["contact"]["address"]
+
+const contacta2 = document.querySelector('.contact p:nth-child(3)');
+contacta2.textContent = siteContent["contact"]["phone"]
+
+const contacta3 = document.querySelector('.contact p:nth-child(4)');
+contacta3.textContent = siteContent["contact"]["email"]
+
+const footer = document.querySelector('footer p');
+footer.textContent = siteContent["footer"]["copyright"]
