@@ -45,7 +45,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 const allNavItems = document.querySelectorAll('nav a');
 for(let i=0; i < allNavItems.length; i++) {
   allNavItems[i].textContent = siteContent['nav'][`nav-item-${i + 1}`]
-  allNavItems[i].style.color = "green"
+  allNavItems[i].style.color = "#12EB0C"
 }
 
 const navAll = document.querySelector('nav a')
@@ -54,12 +54,12 @@ const nav = document.querySelector('nav')
 const backItem = document.createElement('a')
 backItem.textContent = "Hi THERE"
 nav.appendChild(backItem)
-backItem.style.color = "green"
+backItem.style.color = "#12EB0C"
 
 const frontItem = document.createElement('a')
 frontItem.textContent = "HI LOL"
 nav.prepend(frontItem)
-frontItem.style.color = "green"
+frontItem.style.color = "#12EB0C"
 
 ///////////////img/////////////////
 const jumboImg = document.getElementById('cta-img');
@@ -74,6 +74,16 @@ headText.innerHTML = siteContent["cta"]["h1"]
 
 const headTextButton = document.querySelector('.cta-text h1 + button');
 headTextButton.textContent = siteContent["cta"]["button"]
+
+/////////////STRETCH GOAL:toggle night/light mode////////////
+var button = document.querySelector("button");
+button.addEventListener("click", function(){
+  const curColor = document.body.style.backgroundColor;
+  const curTxt = document.body.style.color;
+
+  document.body.style.backgroundColor = curColor === 'white' ? 'dimgray' : 'white';
+  document.body.style.color = curTxt === 'black' ? 'white' : 'black';
+});
 
 const featuresTitle = document.querySelector('.text-content:nth-child(1) h4');
 featuresTitle.textContent = siteContent["main-content"]["features-h4"]
