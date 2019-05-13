@@ -41,6 +41,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+//////////////nav/////////////
 const allNavItems = document.querySelectorAll('nav a');
 for(let i=0; i < allNavItems.length; i++) {
   allNavItems[i].textContent = siteContent['nav'][`nav-item-${i + 1}`]
@@ -60,12 +61,14 @@ frontItem.textContent = "HI LOL"
 nav.prepend(frontItem)
 frontItem.style.color = "green"
 
+///////////////img/////////////////
 const jumboImg = document.getElementById('cta-img');
 jumboImg.setAttribute('src', siteContent["cta"]["img-src"])
 
 const middleImage = document.getElementById('middle-img');
 middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
+////////////main content//////////////////
 const headText = document.querySelector('.cta-text h1');
 headText.innerHTML = siteContent["cta"]["h1"]
 
@@ -132,5 +135,6 @@ contacta2.textContent = siteContent["contact"]["phone"]
 const contacta3 = document.querySelector('.contact p:nth-child(4)');
 contacta3.textContent = siteContent["contact"]["email"]
 
+////////////////footer///////////////////////
 const footer = document.querySelector('footer p');
 footer.textContent = siteContent["footer"]["copyright"]
